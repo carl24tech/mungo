@@ -154,7 +154,7 @@ setTimeout(() => {
             }
             
             var membreGroupe = verifGroupe ? ms.key.participant : '';
-            const { getAllSudoNumbers } = require("./bdd/sudo");
+            const { getAllSudoNumbers } = require("./lib/sudo");
             const nomAuteurMessage = ms.pushName;
             const abu1 = '254710772666';
             const abu2 = '254710772666';
@@ -331,7 +331,7 @@ function mybotpic() {
             
  //---------------------------------------rang-count--------------------------------
              if (texte && auteurMessage.endsWith("s.whatsapp.net")) {
-  const { ajouterOuMettreAJourUserData } = require("./bdd/level"); 
+  const { ajouterOuMettreAJourUserData } = require("./lib/level"); 
   try {
     await ajouterOuMettreAJourUserData(auteurMessage);
   } catch (e) {
@@ -351,7 +351,7 @@ function mybotpic() {
             
                     if(superUser) {console.log('hummm') ; return ;} 
                     
-                    let mbd = require('./bdd/mention') ;
+                    let mbd = require('./lib/mention') ;
             
                     let alldata = await mbd.recupererToutesLesValeurs() ;
             
