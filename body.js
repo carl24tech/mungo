@@ -820,7 +820,7 @@ zk.ev.on('group-participants.update', async (group) => {
                 fs.readdirSync(__dirname + "./lib/scs").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
-                            require(__dirname + "./lib/scs/" + fichier);
+                            require(__dirname + "./lib/scs" + fichier);
                             console.log(fichier + " Installed Successfully✔️");
                         }
                         catch (e) {
