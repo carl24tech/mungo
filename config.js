@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const { Sequelize } = require('sequelize');
-if (fs.existsSync('set.env'))
-    require('dotenv').config({ path: __dirname + '/set.env' });
+if (fs.existsSync('config.env'))
+    require('dotenv').config({ path: __dirname + '/config.env' });
 const path = require("path");
 const databasePath = path.join(__dirname, './database.db');
 const DATABASE_URL = process.env.DATABASE_URL === undefined
