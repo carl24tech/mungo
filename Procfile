@@ -1,1 +1,1 @@
-worker: node lib/body.js 
+worker: node body.js 
