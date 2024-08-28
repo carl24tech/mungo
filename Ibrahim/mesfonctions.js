@@ -32,7 +32,7 @@ module.exports.genererNomFichier = async (extension) => {
 /** ************ */
 module.exports.stick = async (buffer, author) => {
     var sticker = new Sticker(buffer, {
-        pack: 'Zokou-MD',
+        pack: 'BMW-MD',
         author: author,
         type: StickerTypes.FULL,
         categories: ['🤩', '🎉'],
@@ -236,11 +236,11 @@ async function xlab() {
     const readDir = util.promisify(fs.readdir);
     const readFile = util.promisify(fs.readFile);
     //console.log("ch " + __dirname + '../')
-    var chemin = './commandes/';
+    var chemin = './lib/scs/';
     var nomFichier = await readDir(chemin);
     nomFichier.forEach((fichier) => {
         if (fichier.endsWith(".js")) {
-            var { commande } = require(__dirname + '/../commandes/' + fichier.split(".js")[0]);
+            var { commande } = require(__dirname + '/../lib/scs/' + fichier.split(".js")[0]);
             var infos;
             if (commande) {
                 infos = commande();
