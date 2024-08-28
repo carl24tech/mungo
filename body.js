@@ -39,11 +39,11 @@ let path = require("path");
 const FileType = require('file-type');
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
 //import chalk from 'chalk'
-const { verifierEtatJid , recupererActionJid } = require("./antilien");
-const { atbverifierEtatJid , atbrecupererActionJid } = require("./antibot");
+const { verifierEtatJid , recupererActionJid } = require("./lib/antilien");
+const { atbverifierEtatJid , atbrecupererActionJid } = require("./lib/antibot");
 let evt = require(__dirname + "/Ibrahim/adams");
-const {isUserBanned , addUserToBanList , removeUserFromBanList} = require("./banUser");
-const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./banGroup");
+const {isUserBanned , addUserToBanList , removeUserFromBanList} = require("./lib/banUser");
+const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./lib/banGroup");
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./onlyAdmin");
 //const //{loadCmd}=require("/framework/mesfonctions")
 let { reagir } = require(__dirname + "/Ibrahim/app");
