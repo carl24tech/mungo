@@ -44,7 +44,7 @@ const { atbverifierEtatJid , atbrecupererActionJid } = require("./lib/antibot");
 let evt = require(__dirname + "/Ibrahim/adams");
 const {isUserBanned , addUserToBanList , removeUserFromBanList} = require("./lib/banUser");
 const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./lib/banGroup");
-const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./onlyAdmin");
+const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./lib/onlyAdmin");
 //const //{loadCmd}=require("/framework/mesfonctions")
 let { reagir } = require(__dirname + "/Ibrahim/app");
 var session = conf.session.replace(/BMW-MD;;;=>/g,"");
