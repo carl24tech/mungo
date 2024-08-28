@@ -287,7 +287,7 @@ function mybotpic() {
         
                                     if(msg === null || !msg ||msg === 'undefined') {console.log('Message non trouver') ; return } 
         
-                                await zk.sendMessage(idBot,{ image : { url : './lib/store/deleted-message.jpg'},caption : `        *Deleted message detected*\n\n 🚮 Deleted by @${msg.key.participant.split('@')[0]}​` , mentions : [msg.key.participant]},)
+                                await zk.sendMessage(idBot,{ image : { url : './files/deleted-message.jpg'},caption : `        *Deleted message detected*\n\n 🚮 Deleted by @${msg.key.participant.split('@')[0]}​` , mentions : [msg.key.participant]},)
                                 .then( () => {
                                     zk.sendMessage(idBot,{forward : msg},{quoted : msg}) ;
                                 })
@@ -600,7 +600,7 @@ function mybotpic() {
             //execution des commandes   
             if (verifCom) {
                 //await await zk.readMessages(ms.key);
-                const cd = evt.cm.find((zokou) => zokou.nomCom === (com));
+                const cd = evt.cm.find((adams) => adams.nomCom === (com));
                 if (cd) {
                     try {
 
@@ -752,7 +752,7 @@ zk.ev.on('group-participants.update', async (group) => {
 
                 cron.schedule(`${set[1]} ${set[0]} * * *`, async () => {
                   await zk.groupSettingUpdate(crons[i].group_id, 'announcement');
-                  zk.sendMessage(crons[i].group_id, { image : { url : './lib/store/chrono.webp'} , caption: "Hello, it's time to close the group; sayonara." });
+                  zk.sendMessage(crons[i].group_id, { image : { url : './files/chrono.webp'} , caption: "Hello, it's time to close the group; sayonara." });
 
                 }, {
                     timezone: "Africa/Nairobi"
@@ -768,7 +768,7 @@ zk.ev.on('group-participants.update', async (group) => {
 
                   await zk.groupSettingUpdate(crons[i].group_id, 'not_announcement');
 
-                  zk.sendMessage(crons[i].group_id, { image : { url : './media/chrono.webp'} , caption: "Good morning; It's time to open the group." });
+                  zk.sendMessage(crons[i].group_id, { image : { url : './files/chrono.webp'} , caption: "Good morning; It's time to open the group." });
 
                  
                 },{
